@@ -1,0 +1,92 @@
+img/words/transport/plane.png: lėktuvas
+img/words/transport/car.png: mašina
+img/words/transport/troleybus.png: troleibusas
+img/words/transport/bicycle.png: dviratis
+img/words/transport/ship.png: laivas
+img/words/transport/bike.png: motociklas
+img/words/transport/bus.png: autobusas
+img/words/transport/stroller.png: vežimukas
+img/words/food/meat.png: mėsa
+img/words/food/tomatoes.png: pomidoras
+img/words/food/peas.jpg: žirniai
+img/words/food/oats.jpg: avižos
+img/words/food/rice.png: ryžiai
+img/words/food/orange.jpg: apelsinas
+img/words/food/buckwheat.jpg: grikiai
+img/words/food/lemon.jpg: citrina
+img/words/food/broccoli.png: brokolis
+img/words/food/beets.png: burokai
+img/words/food/soup.png: sriuba
+img/words/food/cherries.png: vyšnios
+img/words/food/strawberries.png: braškės
+img/words/food/almonds.png: migdolai
+img/words/food/penne.png: makaronai
+img/words/food/apple.jpg: obuolys
+img/words/food/peach.jpg: persikas
+img/words/food/cheese.jpg: sūris
+img/words/food/banana.png: bananas
+img/words/food/raspberries.jpg: avietės
+img/words/food/potato.png: bulvė
+img/words/food/plums.jpg: slyvos
+img/words/food/egg.png: kiaušinis
+img/words/food/carrot.png: morka
+img/words/food/pumpkin.png: moliūgas
+img/words/food/pear.png: kriaušė
+img/words/food/cucumber.jpg: agurkas
+img/words/food/bread.png: duona
+img/words/clothes/cap.jpg: kepurė
+img/words/clothes/shoes.jpg: batai
+img/words/clothes/sweater.jpg: megstinis
+img/words/clothes/jeans.png: džinsai
+img/words/clothes/shirt.png: marškinėliai
+img/words/clothes/bib.jpg: seilinukas
+img/words/dishes/bowl.jpg: dubuo
+img/words/dishes/fork.png: šakutė
+img/words/dishes/pot.jpg: puodas
+img/words/dishes/plate.jpg: lėkštė
+img/words/dishes/knife.jpg: peilis
+img/words/dishes/bottle.jpg: butelis
+img/words/dishes/sippy_cup.jpg: gertuvė
+img/words/dishes/glass.jpg: stiklinė
+img/words/dishes/frying_pan.jpg: keptuvė
+img/words/dishes/kettle.jpg: virdulys
+img/words/dishes/spoon.png: šaukštas
+img/words/dishes/table_knife.jpg: peilis
+img/words/dishes/cutting_board.jpg: pjaustymo lentelė
+img/words/devices/laptop.png: nešiojamas kompiuteris
+img/words/devices/vacuum_cleaner.png: dulkių siurblys
+img/words/devices/hair_dryer.png: plaukų džiovintuvas
+img/words/devices/iron.png: lygintuvas
+img/words/devices/vitamix_blender.jpg: maišytuvas
+img/words/devices/monitor.jpg: monitorius
+img/words/devices/cell_phone.png: telefonas
+img/words/devices/washing_machine.png: skalbimo mašina
+img/words/animals/pigeon.jpg: balandis
+img/words/animals/crow.jpg: varna
+img/words/animals/cat.png: katė
+img/words/animals/rabbit.jpg: kiškis
+img/words/animals/dog.png: šuo
+img/words/animals/elephant.jpg: dramblys
+img/words/animals/sparrow.png: žvirblis
+img/words/things/toilet_paper.png: tuoletinis popierius
+img/words/things/comb.jpg: šukos
+img/words/things/book.png: knyga
+img/words/things/pencil.jpg: pieštukas
+img/words/things/car_seat.png: mašinos kėdutė
+img/words/furniture/sink.jpg: kriauklė
+img/words/furniture/wc.jpg: klozetas
+img/words/furniture/sofa.png: sofa
+img/words/furniture/floor.png: grindys
+img/words/furniture/closet.png: spinta
+img/words/furniture/armchair.jpg: fotelis
+img/words/furniture/chair.png: kėdė
+img/words/furniture/stove.png: viryklė
+img/words/furniture/lamp.jpg: lempa
+img/words/furniture/water_tap.png: vandens čiaupas
+img/words/furniture/door.jpg: durys
+img/words/furniture/window.png: langas
+img/words/furniture/table.jpg: stalas
+img/words/furniture/refrigerator.jpeg: šaldytuvas
+img/words/furniture/clock.png: laikrodis
+img/words/furniture/bathtub.jpg: vonia
+img/words/furniture/bed.png: lova
