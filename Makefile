@@ -6,3 +6,8 @@ trans:
 
 deploy:
 	buildozer android debug deploy run
+
+log:
+	# sudo apt-get install adb
+	rm logcat.txt
+	adb logcat > logcat.txt

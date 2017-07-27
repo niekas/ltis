@@ -1,0 +1,74 @@
+== LTis - mokausi skaityti ==
+Pridėti paveiksliukus:
+    Mana, tėtis, herbas, vėliava.
+
+Ekrano vietos tinkamas išnaudojimas:
+    Kai teksto mažai, paveikslėlis turi būti arčiau ekrano centro.
+    Kai teksto daug, jis turi užimti visą plotį.
+    Kai teksto per daug, teksto dydis turi sumažėti, kad visas sutilptų.
+    Neturi būti jpg paveiksliukų.
+    Paveiksliukų dydis turi būti panašus
+    Pagerinti paveiksliukų rezoliuciją
+    Paveikslėliai turi būti lygiuojami iš kairės, o ne iš dešinės kaip dažniausiai atrodo. Paveikslėlio vieta turi atsižvelgti į teksto vietą ekrane.
+
+Parinktys:
+    Donate mygtukas prie nustatymų veikiantis, kaip aplikacijos įsigyjimas. Įsigijus užrašas atnaujinamas ir rodomas parinkčių pabaigoje.
+
+    Kalbos:       # Todo: kas geriau vieną kalbą ar kelias kalbas iš karto rodyti?
+     v lietuvių
+       anglų
+    
+    Garsas:  on/off
+
+    Rodyti paveiksliukus:  on/off
+
+    Teksto spalva:   Raudona  |  Juoda
+
+    Categorijos:  # Galima tampyti kategorijas į viršų/apačią, taip pakeliant jos prioritetą
+     v gyvūnai    # Galima pasirinkti kurias kategorijas rodyti
+     v maistas
+    
+    Rodyti paveiksliukų:   25
+
+    Rodyti skirtingų kategorijų:  3
+
+    Kasdien pakeisti paveiksliukų:  1
+
+    Galimybė rašyti komentarą, pranešti apie klaidą prie donate mygtuko.
+
+    Grąžinti standartines parinktis (mygtukas su patvirtinimu).
+    
+
+Visų dydžių rezoliucijų palaikymas:
+    Rasti virtualią testavimo aplinką, kurioje galima išbandyti aplikacijos (.apk) veikimą skirtingų rezoliucijų įrenginiams.
+
+Optimizavimas ir skirtingų platformų palaikymas:
+    iOS įrenginiams: https://github.com/kivy/kivy-ios
+    Užkrovimo trukmės minimizavimas: https://stackoverflow.com/a/21062151/2609806
+    Užkrovimo logotipo pakeitimas: buildozer parinktis presplash.filename (gal gali būti ir gif)
+    Lock mygtuką paspaudus vaizdas užsilokina kai on_pause return True: https://github.com/kivy/python-for-android/issues/978
+    Programėlės būsenos atstatymas po pauzės: nerodomas tinkamas vaizdas.
+
+
+Vertimų atnaujinimas:
+    jeigu paveiksliuko failas nerastas, tada vertimų eilutė užkomentuojama.
+    jeigu rastas failas, kuris dar nebuvo užregistruotas, tada ji pridedamas vertimui
+    Jeigu dingo vertimų įrašas, bet atsirado įrašas kitoje kategorijoje su tokiu
+    pačiu failo vardu, tada perkelti vertimus iš dingusių įrašų į naujai atsiradusiu.
+    Jeigu žodis turi tuščia vertimo reikšmę, jis nerodomas naudotojui.
+
+Nustatymų išsaugojimas faile ir užkrovimas iš failo:
+    Kodėl neveikia settings.cfg failo panaudojimas?
+    Gal verta apsvarstyti naudotojo duomenų išsaugojimą tam skirtoje įrenginio vietoje? Kad duomenys išliktų perinstaliavus aplikaciją.
+
+
+== Vaiko mokymas skaičiuoti ==
+taškiukai - skaičiukai; sudėties, atimties operatoriai, daugybos, dalybos operatoriai
+
+== Įmigrantams, turistams ir lietuviams ==
+LTis tipo informacijos apie lietuvą apsas. Pozityvios informacijos apie
+lietuvos istoriją - paprastai suprantamai slaidų forma parodymas.
+
+== Namie ==
+Reikia didelės lentos prie kurios būtų galima projektuoti, prototipuoti produktus.
+Dokumentacijai, dizaino sprendimams turėti sąsiuvinį, nes elektroniniai failai yra sunkiai skaitomi ir lengvai pametami.

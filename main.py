@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 import argparse
 import configparser
+import random
 import os
 
 # import pygame           # Initial position of window
@@ -18,52 +19,8 @@ from collections import OrderedDict
 
 
 ## Debuging
-# Config.set('graphics', 'width',  960)
-Config.set('graphics', 'width',  1080)
+Config.set('graphics', 'width',  960)
 Config.set('graphics', 'height', 480)
-
-# po failo updatas: jeigu failas nerastas, tada eilutė užkomentuojama.
-# Jeigu rastas failas, kuris dar nebuvo užregistruotas, tada ji pridedamas su
-# tuščia simbolių eilute:
-# 'animals/dog.png' ''    <-- įrašas
-# % 'animals/cat.png' 'katė'
-# 'mammals/cat.png' ''
-# Jeigu dingo vertimų įrašas, bet atsirado įrašas kitoje kategorijoje su tokiu
-# pačiu failo vardu, tada perkelti vertimus iš dingusių įrašų.
-# Jeigu žodis turi tuščia eilutę, jis nerodomas naudotojui.
-#
-# words-lt.po
-# words-en.po
-# categories-lt.po
-# 'animals' 'gyvūnai'
-# categories-en.po
-# 'animals' 'Animals'
-
-
-# Categorijos:  # Galima draginti kategorija i virsu, taip pakeliant jos prioriteta
-#  v gyvūnai
-#  v maistas
-#
-# Kalbos:       # Todo: kas geriau vieną kalbą ar kelias kalbas iš karto rodyti?
-#  v lietuvių
-#    anglų
-#
-# Sound:  on/off
-
-## Kategorijos is pradziu surikiuojamas pagal abecele, o jeigu naudotojas nustato kita prioriteta, tada perrikiuojama pagal prioritetus
-# translated_categorised_words_with_images =
-# {'en': {'animals': {'title': 'animals', 'words': [('img/words/animals/cat.png', 'cat'), ('img/words/animals/dog.png', 'dog'), ],
-#  'lt': OrderedDict({'animals': {'title': 'gyvūnai', 'words': [('img/words/animals/cat.png', 'katė), ('img/words/animals/dog.png', 'šuo'), ],
-#          'food': {'name': 'maistas'
-
-# Dumpu kol kas nereikia
-
-# {'animals': {
-#   'en': {'animals',
-#   'lt': 'gyvūnai',
-#   'words-lt'
-# }}
-
 
 
 def load_word_translations(img_dir='img/words', translations_dir='translations', languages=[]):
@@ -90,13 +47,16 @@ def load_word_translations(img_dir='img/words', translations_dir='translations',
             categories[category] = {'title': category_titles[category], 'words': words}
             for img in os.listdir(os.path.join(img_dir, category)):
                 img_path = os.path.join(img_dir, category, img)
-                words.append((img_path, word_translations[img_path]))
+                word_translation = word_translations.get(img_path)
+                if word_translation:
+                    words.append((img_path, word_translation))
 
         # Todo: Sort OrderedDict by category['title'] in unicode
         # categories = OrderedDict(sorted(categories.items(), key=lambda x: x[1]['title']))
 
         translated_word_categories[lang] = categories
     return translated_word_categories
+
 
 class Pannel(Carousel):
     def __init__(self, **kwargs):
@@ -106,23 +66,28 @@ class Pannel(Carousel):
             Color(1, 1, 1, 1)
             self.rect = Rectangle(size_hint=(1, 1), size=[2000,2000], pos=self.pos)
 
-
-        config = configparser.ConfigParser()
-        config.read('settings.cfg')
-        languages = config['DEFAULT']['languages'].split(',')
+        # config = configparser.ConfigParser()
+        # config.read('settings.cfg')
+        # languages = config['DEFAULT']['languages'].split(',')
+        languages = ['lt', 'en']
         translated_word_categories = load_word_translations(languages=languages)
 
-        main_language = config['DEFAULT']['main_language']
+        # main_language = config['DEFAULT']['main_language']
+        main_language = 'lt'
 
         for key, category in translated_word_categories[main_language].items():
             for img_source, word in category['words']:
                 word = '\n'.join(word.split())
                 box = BoxLayout(orientation='horizontal', padding=20, pos=self.pos, size=self.size)
                 img = Image(source=img_source, size_hint=(0.4, 1))
-                label = Label(text=word, size_hint=(0.6, 1), font_size=150., color=[0,0,0,1], halign='center', valign='middle')
+                img.allow_stretch = True
+                img.size = [img.size[0] * 10, img.size[1]*10]
+                label = Label(text=word, size_hint=(0.6, 1), font_size=134., color=[0,0,0,1], halign='center', valign='middle')
                 box.add_widget(img)
                 box.add_widget(label)
                 self.add_widget(box)
+
+        self.index = random.randint(0, len(self.slides))
 
 
 class PannelApp(App):
